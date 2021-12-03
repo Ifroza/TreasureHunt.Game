@@ -1,0 +1,59 @@
+print("Welcome to the treasure hunt game! You have to find 'Kohinoor' by surpassing a few obstacles.")
+
+name_player= input("Please enter your name: ")
+print("Alright",name_player, ", let's begin!")
+ 
+print("Welcome to Level-1!")
+swim_boat= input("Do you want to cross the river by swimming or want to wait for a boat? Write 'Swim' or 'Boat'. ")
+swim_boat= swim_boat.lower()
+if swim_boat== "boat" :
+    print("-->Congrats you have succesfully crossed the river which marks the end of Level-1.")
+    print("Welcome to Level-2!")
+
+    bird_save_kill = input('Now your task is to save the most precious parrot in the world whose name is "Ro". But there is 1 other hunter trying to catch her, and you have to catch Ro before he does and set her free. What should you do? Please choose, "Climb the tree to get Ro" or "Hit the hunter with a brick". ')
+    bird_save_kill= bird_save_kill.lower()
+    if bird_save_kill == "climb the tree to get ro" :
+      print("-->Congrats you have succesfully saved Ro which marks the end of Level-2.")
+      print("Welcome to Level-3!")
+    elif bird_save_kill == "hit the hunter with a brick":
+     print('Nooo wrong step, why would you hit someone with a brick?! Game over!!')
+     door= input('You can see 3 doors infront of you and you have to choose the correct door to get your treasure "Kohinoor". The first door is white, second one is green and the third one is yellow. Please choose, "White" or "Green" or "Yellow".')
+     door=door.lower()
+     if door == "white":
+       print('OMG a big 8-legged monster killed you!')
+       life= input('Do you want to request for 1 more life? Write "Yes" or "No": ')
+       life=life.lower()
+       if life ==  "yes":
+         print("Life Granted")
+         door2= input('You can see 2 doors infront of you and you have to choose the correct door to get your treasure "Kohinoor". The first door is green and the second one is yellow. Please choose,"Green" or "Yellow".')
+         door2=door2.lower()
+         if door2 == "yellow":
+           print('A psycho just knifed you! Last life is gone!! Game over!!!')
+         elif door2== "green":
+           print('***Woohoo YOU GOT THE KOHINNOOR! Congrats you made it', name_player,'!!***')
+       else: 
+         print('You chose No, life not granted.')
+     elif door == "green":
+       print('Woohoo YOU GOT THE KOHINNOOR! Congrats you made it', name_player,'!!')
+     elif door == "yellow":
+        print('A psycho just knifed you!')
+        life= input('Do you want to request for 1 more life? Write "Yes" or "No": ')
+        life=life.lower()
+        if life == "yes":
+          print("Life Granted")
+          door2= input('You can see 2 doors infront of you and you have to choose the correct door to get your treasure "Kohinoor". The first door is white and the second one is green. Please choose, "White" or "Green".')
+          door2=door2.lower()
+          if door2 == "white":
+            print('OMG a big 8-legged monster killed you! Last life is gone!! Game over!!!')
+          elif door2 == "green":
+            print('Woohoo YOU GOT THE KOHINNOOR! Congrats you made it', name_player,'!!')
+        else: 
+          print('You chose No, life not granted.') 
+     else: 
+       print('Wrong input type. Try Again!')
+    else:
+      print('Wrong input type. Try Again!')
+elif swim_boat == "swim" :
+  print('Oh no! You got eaten by the hungry shark! Game over!!')
+else:
+  print('Wrong input type. Try Again!')
