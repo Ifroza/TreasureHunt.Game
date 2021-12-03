@@ -1,3 +1,3 @@
 # TreasureHunt.Game
-Easy treasure hunt game
-Language- Python
+Easy treasure hunt game.
+Language - Python
